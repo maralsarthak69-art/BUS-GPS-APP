@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+    WidgetFlutterBinding.ensureInitialisation();
+    await Firebase.InitialiseApp();
+    runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
